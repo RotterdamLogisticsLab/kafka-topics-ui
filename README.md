@@ -1,3 +1,13 @@
+# Notes HBR
+We changed `ENTRYPOINT` to `CMD` because this is required by Heroku. \
+Build the container by running `docker build -t havenbedrijf/kafka-ui .` in the `docker` folder. \
+Aiven connection details can be found in the aiven console.
+
+## Push to Heroku
+After building de container tag it like this `docker tag {IMAGE ID} registry.heroku.com/pronto-kafka-ui-demo/web` \
+Login in Heroku Docker `heroku container:login` \
+Then you can push to heroku like this `docker push registry.heroku.com/pronto-kafka-ui-demo/web`
+
 # kafka-topics
 
 [![release](http://github-release-version.herokuapp.com/github/landoop/kafka-topics-ui/release.svg?style=flat)](https://github.com/landoop/kafka-topics-ui/releases/latest)
